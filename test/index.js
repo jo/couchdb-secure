@@ -12,9 +12,7 @@ var db = couch.use(dbname)
 
 
 function clear(callback) {
-  couch.db.destroy(dbname, function() {
-    couch.db.create(dbname, callback)
-  })
+  couch.db.destroy(dbname, callback)
 }
 
 test('configure from json', function(t) {

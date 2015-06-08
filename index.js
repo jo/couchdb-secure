@@ -1,16 +1,23 @@
 var nano = require('nano')
 var compile = require('couch-compile')
+var ensure = require('couchdb-ensure')
 
 module.exports = function configure(url, source, callback) {
   var db = nano(url)
   var couch = nano(db.config.url)
 
   compile(source, function(error, secObj) {
-    couch.request({
-      method: 'PUT',
-      path: '_security',
-      db: db.config.db,
-      body: secObj
-    }, callback)
+    if (error) return callback(error)
+
+    ensure(url, function(error) {
+      if (error) return callback(error)
+
+      couch.request({
+        method: 'PUT',
+        path: '_security',
+        db: db.config.db,
+        body: secObj
+      }, callback)
+    })
   })
 }
