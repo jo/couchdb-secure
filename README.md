@@ -11,7 +11,7 @@ so you can use a json file, node module or filesystem mapping.
 
 ```js
 var secure = require('couchdb-secure')
-secure('http://localhost:5984', 'couchdb/security.json', function(error, response) {
+secure('http://localhost:5984/mydb', 'couchdb/security.json', function(error, response) {
   // here we go
 })
 ```
@@ -19,7 +19,7 @@ secure('http://localhost:5984', 'couchdb/security.json', function(error, respons
 ## CLI
 
 ```sh
-couchdb-secure http://localhost:5984 couchdb/security.json
+couchdb-secure http://localhost:5984/mydb couchdb/security.json
 ```
 
 ## Tests
