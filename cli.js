@@ -1,13 +1,18 @@
 #!/usr/bin/env node
 
-var configure = require('./')
+var secure = require('./')
 
 
-var url = process.argv[2]
-var source = process.argv[3]
+var args = process.argv.slice(2);
+if (!args.length) {
+  return console.log('Usage: \ncouchdb-secure URL [SOURCE]')
+}
+
+var url = args[0];
+var source = args[1] || process.cwd()
 
 
-configure(url, source, function(error, response) {
+secure(url, source, function(error, response) {
   if (error) return console.error(error)
 
   console.log(JSON.stringify(response, null, '  '))
