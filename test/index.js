@@ -24,3 +24,11 @@ test('configure from json', function(t) {
     })
   })
 })
+
+test('nano object as url', function(t) {
+  secure(db, path.join(__dirname, 'fixtures', 'security.json'), function(error, response) {
+    t.notOk(error, 'no error occured')
+    t.ok(response.ok, 'response is ok')
+    t.end()
+  })
+})

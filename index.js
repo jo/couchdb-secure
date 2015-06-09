@@ -3,7 +3,7 @@ var compile = require('couchdb-compile')
 var ensure = require('couchdb-ensure')
 
 module.exports = function configure(url, source, callback) {
-  var db = nano(url)
+  var db = typeof url.config === 'object' ? url : nano(url)
   var couch = nano(db.config.url)
 
   compile(source, function(error, secObj) {
