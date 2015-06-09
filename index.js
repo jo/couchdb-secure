@@ -1,5 +1,5 @@
 var nano = require('nano')
-var compile = require('couch-compile')
+var compile = require('couchdb-compile')
 var ensure = require('couchdb-ensure')
 
 module.exports = function configure(url, source, callback) {
