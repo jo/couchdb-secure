@@ -1,6 +1,6 @@
 {
   "name": "couchdb-secure",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Write couchdb security object from file or directory.",
   "main": "index.js",
   "bin": "cli.js",
