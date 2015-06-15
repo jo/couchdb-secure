@@ -6,7 +6,7 @@ module.exports = function configure(url, source, callback) {
   var db = typeof url.config === 'object' ? url : nano(url)
   var couch = nano(db.config.url)
 
-  compile(source, function(error, secObj) {
+  compile(source, { index: true }, function(error, secObj) {
     if (error) return callback(error)
 
     ensure(url, function(error) {
