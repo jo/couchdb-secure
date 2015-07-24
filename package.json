@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/eHealthAfrica/couchdb-secure#readme",
   "dependencies": {
-    "couchdb-compile": "^1.5.3",
+    "couchdb-compile": "^1.5.5",
     "couchdb-ensure": "^1.2.1",
     "nano-option": "^1.0.0"
   },
