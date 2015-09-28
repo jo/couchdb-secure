@@ -1,15 +1,15 @@
 {
   "name": "couchdb-secure",
-  "version": "1.3.6",
   "description": "Write couchdb security object from file or directory.",
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "tape test/index.js | tap-spec"
+    "test": "tape test/index.js | tap-spec",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eHealthAfrica/couchdb-secure.git"
+    "url": "https://github.com/eHealthAfrica/couchdb-secure.git"
   },
   "keywords": [
     "couchdb",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "nano": "^6.1.3",
     "tap-spec": "^4.0.0",
-    "tape": "^4.0.0"
+    "tape": "^4.0.0",
+    "semantic-release": "^4.3.5"
   }
 }
