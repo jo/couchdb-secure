@@ -4,7 +4,7 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "tap --coverage test/index.js",
+    "test": "standard && tap --coverage test/index.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "devDependencies": {
     "nano": "^6.2.0",
     "semantic-release": "^6.0.3",
+    "standard": "^6.0.4",
     "tap": "^5.4.3"
   }
 }
