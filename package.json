@@ -4,7 +4,7 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "tape test/index.js | tap-spec",
+    "test": "tap --coverage test/index.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -24,12 +24,11 @@
   "dependencies": {
     "couchdb-compile": "^1.6.2",
     "couchdb-ensure": "^1.3.1",
-    "nano-option": "^1.1.1"
+    "nano-option": "^1.2.2"
   },
   "devDependencies": {
-    "nano": "^6.1.5",
-    "tap-spec": "^4.1.0",
-    "tape": "^4.2.1",
-    "semantic-release": "^6.0.3"
+    "nano": "^6.2.0",
+    "semantic-release": "^6.0.3",
+    "tap": "^5.4.3"
   }
 }
