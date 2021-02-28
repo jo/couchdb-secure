@@ -1,9 +1,6 @@
 # CouchDB Secure
 Write couchdb security object from file or directory.
 
-[![Build
-Status](https://travis-ci.org/jo/couchdb-secure.svg?branch=master)](https://travis-ci.org/jo/couchdb-secure)
-
 
 ## API
 
