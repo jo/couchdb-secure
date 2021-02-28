@@ -1,10 +1,10 @@
-var nanoOption = require('nano-option')
-var compile = require('couchdb-compile')
-var ensure = require('couchdb-ensure')
+const nanoOption = require('nano-option')
+const compile = require('couchdb-compile')
+const ensure = require('couchdb-ensure')
 
 module.exports = function configure (url, source, callback) {
-  var db = nanoOption(url)
-  var couch = nanoOption(db.config.url)
+  const db = nanoOption(url)
+  const couch = nanoOption(db.config.url)
 
   compile(source, { index: true }, function (error, secObj) {
     if (error) return callback(error)

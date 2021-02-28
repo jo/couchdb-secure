@@ -1,13 +1,13 @@
-var test = require('tap').test
-var path = require('path')
-var nano = require('nano')
+const test = require('tap').test
+const path = require('path')
+const nano = require('nano')
 
-var secure = require('../')
+const secure = require('../')
 
-var url = process.env.COUCH || 'http://localhost:5984'
-var dbname = 'couchdb-secure-test'
-var couch = nano(url)
-var db = couch.use(dbname)
+const url = process.env.COUCH || 'http://localhost:5984'
+const dbname = 'couchdb-secure-test'
+const couch = nano(url)
+const db = couch.use(dbname)
 
 function clear (callback) {
   couch.db.destroy(dbname, callback)
