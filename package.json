@@ -4,7 +4,7 @@
   "main": "index.js",
   "bin": "cli.js",
   "scripts": {
-    "test": "tap --reporter=spec test/index.js",
+    "test": "tap --reporter=spec --branches 50 --statements 80 test/index.js",
     "pretest": "standard",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
@@ -24,15 +24,15 @@
   },
   "homepage": "https://github.com/jo/couchdb-secure#readme",
   "dependencies": {
-    "couchdb-compile": "^1.11.0",
-    "couchdb-ensure": "^2.0.0",
-    "nano-option": "^2.0.0"
+    "couchdb-compile": "^1.11.2",
+    "couchdb-ensure": "^2.1.0",
+    "nano-option": "^2.2.0"
   },
   "devDependencies": {
-    "nano": "^9.0.3",
-    "semantic-release": "^17.4.0",
-    "standard": "^16.0.3",
-    "tap": "^14.11.0"
+    "nano": "^9.0.5",
+    "semantic-release": "^18.0.0",
+    "standard": "^16.0.4",
+    "tap": "^15.0.10"
   },
   "version": "0.0.0-development",
   "release": {
